@@ -25,7 +25,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['heroku-music-app-hw4.herokuapp.com', '127.0.0.1']
+ALLOWED_HOSTS = ['heroku-backend-2.herokuapp.com', '127.0.0.1']
 
 
 # Quick-start development settings - unsuitable for production
@@ -149,7 +149,9 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-CORS_ALLOWED_ORIGINS = [
+CORS_ALLOWED_ORIGINS = (
     'http://localhost:3000',
-    'https://localhost:3000',
-]
+    'http://localhost:4200',
+    'https://fir-tutorial-4e05f.web.app',
+    'https://fir-tutorial-4e05f.firebaseapp.com',
+)
